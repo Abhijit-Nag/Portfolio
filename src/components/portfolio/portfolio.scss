@@ -1,0 +1,160 @@
+@import "../../global.scss";
+
+.portfolio {
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+
+
+
+
+    h1 {
+        font-size: 50px;
+        font-family: kenia, cursive;
+        overflow: hidden;
+
+        @include mobile {
+            font-size: 25px;
+            overflow-y: hidden;
+            padding: 10px;
+            margin: 15px;
+        }
+    }
+    h1::first-letter{
+        // font-family: kalam;
+        font-size: 100px;
+        @include mobile{
+            font-size: 50px;
+        }
+    }
+
+    ul {
+        margin: 10px;
+        padding: 0;
+        list-style: none;
+        display: flex;
+
+        @include mobile {
+            // flex-direction: column;
+            flex-wrap: wrap;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            // z-index: 4;
+            // margin: ;
+        }
+
+        li {
+            font-size: 14px;
+            margin-right: 50px;
+            padding: 7px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-family: kalam;
+            font-weight: 600;
+            overflow: hidden;
+
+            @include mobile {
+                margin-right: 15px;
+                font-weight: 900;
+            }
+
+            &.active {
+                background-color: $mainColor;
+                color: white;
+
+            }
+        }
+        li::first-letter{
+            font-size: 26px;
+           
+        }
+    }
+
+    .container {
+        width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        // overflow: hidden;
+
+        @include mobile {
+            // flex-direction: ;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            width: auto;
+            height: 200px;
+            border-radius: 20px;
+            border: 1px solid rgb(240, 239, 239);
+            margin: 10px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+
+            @include mobile {
+                flex-direction: row;
+                flex-wrap: wrap;
+                height: 100px;
+                width: 80px;
+                // padding: 10px;
+
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+
+                @include mobile {
+                    height: 100%;
+                }
+
+               
+            } 
+            .name {
+                    font-size: 36px;
+                    // overflow: hidden;
+                    padding: 6px;
+                    position: absolute;
+                    font-family: kenia, cursive;
+                    color: rgb(61, 45, 45);
+                    font-weight: normal;
+
+                    @include mobile {
+                        font-size: 16px;
+                    }
+                }
+                .name::first-letter{
+                    font-size: 60px;
+                    @include mobile{
+                        font-size: 34px;
+                    }
+                }
+
+            &:hover {
+                background-color: $mainColor;
+
+                img {
+                    opacity: 0.2;
+                    z-index: 0;
+
+                }
+
+                h3 {
+                    color: white;
+                }
+            }
+
+        }
+
+
+    }
+}

@@ -1,0 +1,130 @@
+@import "../../global.scss";
+.contact{
+    // background-color: rgb(174, 82, 100);
+    display: flex;
+    @include mobile{
+        flex-direction: column;
+    }
+    
+
+    .left{
+        flex: 5;
+        overflow: hidden;
+        border-radius: 50%;
+        background-color: white;
+
+        
+
+        h1{
+            margin-top: 100px;
+            margin-left: 250px;
+            font-weight: 400;
+            position: absolute;
+            @include mobile{
+                margin-left: 160px;
+
+            }
+            font-family: 'Kenia', cursive;
+
+        }
+        h1::first-letter{
+            font-size: 65px;
+        }
+        
+        img{
+            // height: 100%;
+            width: 260px;
+            height: 260px;
+            margin: auto;
+            margin-top: 8vw;
+            margin-left: 15vw;
+            object-fit: cover;
+            // width: 100%;
+            border-radius: 50%;
+            @include mobile{
+                width: 150px;
+                height: 150px;
+                // background-color: green;
+            }
+        }
+    }
+    
+    .right{
+        flex: 5;
+        
+        display: flex;
+        flex-direction: column;
+        // background-color: crimson;
+        align-items: center;
+        justify-content: space-around;
+
+        h2{
+            font-size: 60px;
+            letter-spacing: 4px;
+            font-family: 'Kenia', cursive;
+        }
+
+        form{
+            width: 70%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+            justify-content: center;
+
+            input{
+                padding: 4px 30px;
+                width: 300px;
+                height: 30px;
+                font-size: 14px;
+                margin-bottom: 30px;
+                border-radius: 20px;
+                border: none;
+                @include mobile{
+                    border-radius: 20px;
+                    text-align: center;
+                    width: auto;
+                    height: 40px;
+                    border-radius: 15px;
+                }
+            }
+
+            textarea{
+                width: 300px;
+                height: 200px;
+                font-size: 14px;
+                border-radius: 10px;
+                border: none;
+                padding: 10px 40px;
+                @include mobile{
+                    text-align: center;
+                    width: auto;
+                }
+            }
+
+            button{
+                width: 150px;
+                // height: 30px;
+                color: white;
+                font-size: 30px;
+                background-color: crimson;
+                border-radius: 10px;
+                margin: 10px;
+                border: none;
+                padding: 10px;
+                @include mobile{
+                    font-size: 15px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: auto;
+                    overflow-y: hidden;
+                }
+
+                
+            }
+        }
+    }
+
+}
